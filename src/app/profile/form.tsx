@@ -40,14 +40,13 @@ export default function Form({ data } : FormData) {
     return (
         <form action={handleSubmit} className="space-y-4 ">
             <Label htmlFor="name">Nome</Label>
-            <Input type="name" name="name" id="name" required />
+            <Input type="name" name="name" id="name" required value={profile.name}/>
             <Label htmlFor="bio">Bio</Label>
-            <Input type="bio" name="bio" id="bio" required />
+            <Input type="bio" name="bio" id="bio" required value={profile.bio} />
             <Label htmlFor="email">Email</Label>
-            <Input type="email" name="email" id="email" required />
+            <Input type="email" name="email" id="email" readOnly value={profile.email}/>
             <Button>Salvar</Button>
           
-            <Button>Salvar</Button>
             { state.success && 
                     <Alert className="bg-green-700">
                         <CheckIcon className="w-6 h-6" />
